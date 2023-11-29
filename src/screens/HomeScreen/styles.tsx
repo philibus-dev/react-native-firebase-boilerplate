@@ -10,6 +10,7 @@ export default StyleSheet.create({
     borderRadius: 5,
     overflow: 'hidden',
     backgroundColor: 'white',
+    color: 'black',
     marginTop: 10,
     marginBottom: 10,
     marginLeft: 30,
