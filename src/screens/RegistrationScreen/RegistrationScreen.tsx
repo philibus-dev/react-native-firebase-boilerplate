@@ -14,16 +14,16 @@ export default function RegistrationScreen({navigation}: any) {
   };
 
   const onRegisterPress = () => {
-    console.log('email', email);
-    console.log('password', password);
-    console.log('fullName', fullName);
-    console.log('confirmPassword', confirmPassword);
+    if (password !== confirmPassword) {
+      console.error("Passwords don't match");
+      return;
+    }
   };
 
   return (
     <View style={styles.container}>
       <KeyboardAwareScrollView
-        style={{flex: 1, width: '100%'}}
+        style={styles.scrollView}
         keyboardShouldPersistTaps="always">
         <Image
           style={styles.logo}

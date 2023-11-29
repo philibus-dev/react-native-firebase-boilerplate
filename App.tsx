@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LoginScreen, HomeScreen, RegistrationScreen} from './src/screens';
@@ -14,8 +14,8 @@ if (!global.atob) {
 const Stack = createStackNavigator();
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  const [user] = useState(null);
 
   return (
     <NavigationContainer>
