@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -31,6 +31,10 @@ npm run android
 # OR using Yarn
 yarn android
 ```
+
+### Debugging for Android
+
+To initialize debug on android device type `adb shell input keyevent 82` (physical) and Ctrl+M (Emulator)
 
 ### For iOS
 
