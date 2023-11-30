@@ -1,3 +1,5 @@
+You will need to create a android app and ios app in your firebase account. See instructions for setting up module here: <https://rnfirebase.io/>
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started

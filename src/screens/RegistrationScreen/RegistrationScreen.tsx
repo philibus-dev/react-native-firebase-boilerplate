@@ -3,8 +3,9 @@ import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
 
+import auth from '@react-native-firebase/auth';
+
 export default function RegistrationScreen({navigation}: any) {
-  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,6 +19,15 @@ export default function RegistrationScreen({navigation}: any) {
       console.error("Passwords don't match");
       return;
     }
+
+    auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   };
 
   return (
@@ -28,16 +38,6 @@ export default function RegistrationScreen({navigation}: any) {
         <Image
           style={styles.logo}
           source={require('../../../assets/icon.png')}
-        />
-
-        <TextInput
-          style={styles.input}
-          placeholder="Full Name"
-          placeholderTextColor="#aaaaaa"
-          onChangeText={text => setFullName(text)}
-          value={fullName}
-          underlineColorAndroid="transparent"
-          autoCapitalize="none"
         />
 
         <TextInput

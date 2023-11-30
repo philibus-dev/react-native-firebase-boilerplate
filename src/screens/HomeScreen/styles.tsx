@@ -5,16 +5,23 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  input: {
-    height: 48,
-    borderRadius: 5,
-    overflow: 'hidden',
-    backgroundColor: 'white',
+  text: {
     color: 'black',
-    marginTop: 10,
-    marginBottom: 10,
+  },
+  button: {
+    backgroundColor: '#788eec',
     marginLeft: 30,
     marginRight: 30,
-    paddingLeft: 16,
+    marginTop: 20,
+    height: 48,
+    width: 200,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonTitle: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
